@@ -1,5 +1,3 @@
-
-
 import os, sys
 sys.path.append(os.getcwd())
 
@@ -155,11 +153,8 @@ with tf.Session() as session:
     print("Starting TensorFlow session...")
     print("Local current time :", localtime)
     
-
     # Start TensorFlow session...
     session.run(tf.global_variables_initializer())
-
-    print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 
     def generate_samples():
         samples = session.run(fake_inputs)
